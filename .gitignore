@@ -1,0 +1,29 @@
+# 🔹 Python
+_pycache_/
+*.py[cod]
+*.pyo
+
+# 🔹 Virtual Environment
+venv/
+env/
+
+# 🔹 Django
+db.sqlite3
+*.log
+media/
+
+# 🔹 Static files (optional)
+staticfiles/
+
+# 🔹 Environment variables (VERY IMPORTANT)
+.env
+
+# 🔹 OS files
+.DS_Store
+Thumbs.db
+
+# 🔹 VS Code
+.vscode/
+
+# 🔹 PyCharm
+.idea/

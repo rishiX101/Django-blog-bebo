@@ -1,0 +1,41 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<article class="media content-section">
+  <div class="row">
+    
+    <!-- Profile Image -->
+    <div class="col-md-2 d-flex align-items-center justify-content-center">
+      {% if post.author.profile.image %}
+        <img class="rounded-circle"
+             src="{{ post.author.profile.image.url }}"
+             style="width: 100px; height: 100px; object-fit: cover;">
+      {% endif %}
+    </div>
+
+    <!-- Post Content -->
+    <div class="media-body col-md-10">
+      
+      <!-- Author + Date -->
+      <div class="article-metadata">
+        <a class="mr-2 text-decoration-none"
+           href="{% url 'user_posts' post.author.username %}">
+           {{ post.author }}
+        </a>
+        <small class="text-muted">
+          {{ post.created_at|date:"F d, Y" }}
+        </small>
+      </div>
+
+      <!-- Title -->
+      <h2 class="article-title">{{ post.title }}</h2>
+
+      <!-- Content -->
+      <p class="article-content">{{ post.content }}</p>
+
+    </div>
+  </div>
+</article>
+
+{% endblock content %}
