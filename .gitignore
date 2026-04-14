@@ -8,12 +8,11 @@ venv/
 env/
 
 # 🔹 Django
-db.sqlite3
+
 *.log
 media/
 
-# 🔹 Static files (optional)
-staticfiles/
+
 
 # 🔹 Environment variables (VERY IMPORTANT)
 .env
